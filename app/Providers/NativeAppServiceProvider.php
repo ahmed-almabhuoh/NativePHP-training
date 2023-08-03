@@ -38,11 +38,11 @@ class NativeAppServiceProvider
             // ->height(800)
             // ->frameless(true)
             // ->rememberState(true)
-            ->route('login')
+            ->route('splash.screen')
             ->title('ORBIT TECH.')
             ->showDevTools(false)
-            ->width(1200)
-            ->height(500);
+            ->width(1300)
+            ->height(700);
 
             // Window::open('Second')->title('Second');
 
