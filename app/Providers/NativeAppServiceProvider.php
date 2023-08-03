@@ -16,22 +16,35 @@ class NativeAppServiceProvider
      */
     public function boot(): void
     {
-        Menu::new()
-            ->appMenu()
-            ->submenu('About', Menu::new()
-                ->link('https://beyondco.de', 'Beyond Code')
-                ->link('https://simonhamp.me', 'Simon Hamp')
-            )
-            ->submenu('View', Menu::new()
-                ->toggleFullscreen()
-                ->separator()
-                ->link('https://laravel.com', 'Learn More', 'CmdOrCtrl+L')
-            )
-            ->register();
+        // Menu::new()
+        //     ->appMenu()
+        //     ->submenu('About', Menu::new()
+        //         ->link('https://beyondco.de', 'Beyond Code')
+        //         ->link('https://simonhamp.me', 'Simon Hamp')
+        //     )
+        //     ->submenu('View', Menu::new()
+        //         ->toggleFullscreen()
+        //         ->separator()
+        //         ->link('https://laravel.com', 'Learn More', 'CmdOrCtrl+L')
+        //     )
+        //     ->register();
+
+        // Window::open()
+        //     ->width(800)
+        //     ->height(800);
 
         Window::open()
-            ->width(800)
-            ->height(800);
+            // ->width(800)
+            // ->height(800)
+            // ->frameless(true)
+            // ->rememberState(true)
+            ->route('login')
+            ->title('ORBIT TECH.')
+            ->showDevTools(false)
+            ->width(1200)
+            ->height(500);
+
+            // Window::open('Second')->title('Second');
 
         /**
             Dock::menu(
@@ -53,6 +66,6 @@ class NativeAppServiceProvider
                 ->key('CmdOrCtrl+Shift+I')
                 ->event(ShortcutPressed::class)
                 ->register();
-        */
+         */
     }
 }
